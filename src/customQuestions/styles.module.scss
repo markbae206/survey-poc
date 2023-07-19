@@ -1,0 +1,65 @@
+.thermometerContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.thermometerItemsContainer {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.thermometerItem {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  height: 30px;
+  width: 30px;
+}
+
+.thermometerItem:first-child {
+  border-bottom: 1px solid black;
+}
+
+.thermometerItem:last-child {
+  border-top: 1px solid black;
+}
+
+.thermometerItemSelectd {
+  background-color: lightblue;
+}
+
+.leftContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: initial;
+}
+
+.rightContainer {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.rightContainer button {
+  margin-bottom: 20px;
+}
+
+// :global(.App) {
+//   .thermometerContainer {
+//     background-color: pink;
+
+  // }
+// }
+  .green {
+    background-color: lightseagreen;
+  }
+
+  [data-theme="custom"]{
+    background-color: purple;
+    padding:30px;
+    .thermometerContainer{
+      @extend .green;
+      // background-color: orange;
+    }
+  }
